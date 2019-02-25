@@ -64,6 +64,11 @@ function restartGame() {
   start = false;
 
   playSound("wrong");
+  //To flash red screen body on wrong answer to get user's attention!
+  $("body").addClass("game-over");
+  setTimeout(function(){
+  $("body").removeClass("game-over");
+}, 150);
   //console.log("wrong");
   $("h1").text("Press A Key to Start");
 }
